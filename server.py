@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import Flask, render_template
 import sqlite3
 # import requests
 from flask import Flask
@@ -6,7 +6,9 @@ from flask import request,redirect,url_for,session,flash
 from flask_wtf import Form
 from wtforms import TextField
 app = Flask(__name__)
-app.secret_key = "super secret key"
+app.secret_key = "e4b699bd9c2d2de30a96e5c5f5e7a8f1"
+
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 @app.route('/')
 def hel():
